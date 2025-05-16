@@ -2,7 +2,7 @@
   <a name="readme-top"></a>
   <!-- Using the horizontal logo -->
   <br/>
-  <a href="https://axwise.de/" target="_blank"><h1>AxWise Flow 🚀</h1>
+  <a href="https://axwise.de/" target="_blank"><h1>AxWise Flow 🚀</h1></a>
 
   <h2>Your AI Co-Pilot from Raw Idea to Actionable Plan</h2>
   <p>
@@ -11,12 +11,12 @@
 
   <p>
     <!-- Badges -->
-    <a href="https://github.com/AxWise-GmbH/Flow/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache_2.0-blue.svg?style=flat-square" alt="License"></a>
+    <a href="https://github.com/AxWise-GmbH/Flow/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache_2.0-blue.svg?style=flat-square" alt="License: Apache 2.0"></a>
     <a href="https://github.com/AxWise-GmbH/Flow"><img src="https://img.shields.io/badge/Status-Active%20Development-brightgreen?style=flat-square" alt="Status: Active Development"></a>
     <a href="https://github.com/AxWise-GmbH/Flow/stargazers"><img src="https://img.shields.io/github/stars/AxWise-GmbH/Flow.svg?style=social&label=Star&maxAge=2592000" alt="GitHub stars"></a>
     <a href="https://github.com/AxWise-GmbH/Flow/issues"><img src="https://img.shields.io/github/issues/AxWise-GmbH/Flow?style=flat-square" alt="GitHub issues"></a>
-    <!-- Add links to Docs/Release later -->
-    <a href="[Link to API Docs - TODO]"><img src="https://img.shields.io/badge/API_Docs-Coming_Soon-orange?style=flat-square" alt="API Documentation"></a> 
+    <a href="docs/API_DOCS.md"><img src="https://img.shields.io/badge/API_Docs-View_Here-orange?style=flat-square" alt="API Documentation"></a> 
+    <!-- Consider adding a "Release: Coming Soon" badge if you have a target -->
   </p>
   <p>
     <strong>✨ Star this repo to follow our progress and support the open-source product development revolution! ✨</strong>
@@ -41,7 +41,7 @@ Leveraging 14+ years of product development experience, AxWise Flow provides an 
 *   **Prioritize & Plan:** Identify key insights ranked by potential impact and generate actionable outputs like user stories and strategic recommendations.
 *   **Validate & Iterate:** Structure your validation process and refine your plans based on evidence.
 
-The **core engine, LLM processing logic, prompts, and API** are functional and will be **open-source** (Apache 2.0). This allows enterprises, startups, and individuals to self-host, integrate via API, customize, and benefit from transparency, addressing common concerns with proprietary "black box" analysis tools. A premium SaaS offering will provide a seamless UI, managed infrastructure, and advanced features.
+The **core engine, LLM processing logic, prompts, and API** are functional and will be **open-sourced under Apache License 2.0**. This allows enterprises, startups, and individuals to self-host, integrate via API, customize, and benefit from transparency, addressing common concerns with proprietary "black box" analysis tools. A premium SaaS offering will provide a seamless UI, managed infrastructure, and advanced features.
 
 <div align="center">
   <h3>The AxWise Flow Process</h3>
@@ -89,7 +89,7 @@ AxWise Flow already includes a powerful set of API-driven features:
   </tr>
 </table>
 
-### Example Output Snippet (Theme Schema)
+### Example Output Snippet (Theme Schema from API)
 ```json
 {
   "themes": [
@@ -103,53 +103,58 @@ AxWise Flow already includes a powerful set of API-driven features:
         // ... more statements
       ],
       "definition": "Practical difficulties encountered when planning and conducting user research...",
-      "keywords": ["stakeholder buy-in", "finding users", "budget", ...],
-      "codes": ["RESEARCH_CHALLENGES", "STAKEHOLDER_RESISTANCE", ...], // Categorization codes
+      "keywords": ["stakeholder buy-in", "finding users", "budget", "..."],
+      "codes": ["RESEARCH_CHALLENGES", "STAKEHOLDER_RESISTANCE", "..."], // Categorization codes
       "reliability": 0.9, // Confidence in theme identification (0-1)
       "process": "enhanced", // Analysis process used
       "sentiment_distribution": { // Sentiment breakdown within this theme
         "positive": 0.1, "neutral": 0.2, "negative": 0.7
       }
-    },
+    }
     // ... more themes
   ]
   // ... patterns, sentiment, personas, insights etc.
-}
-```
+}```
 
 ## 🚀 Getting Started
 
 AxWise Flow's core functionalities are operational and accessible via its API. The full open-source core release and the SaaS UI are under active development.
 
-**1. Explore the API (Coming Soon):**
-*   We are preparing comprehensive API documentation. `[Link to API Docs - TODO]`
-*   Interested in early API access or partnership? Contact us at [vitalijs@axwise.de](mailto:vitalijs@axwise.de)
+**1. Explore the API:**
+*   Our API is functional. Refer to the **[API Documentation](docs/API_DOCS.md)** for details on endpoints and usage.
+*   Interested in early API access for integration or partnership? Contact us at [vitalijs@axwise.de](mailto:vitalijs@axwise.de).
 
 **2. Prepare for Self-Hosting (Open Source Core - Coming Soon):**
-The open-source core is designed for straightforward self-hosting. The setup will likely involve:
+The open-source core is designed for straightforward self-hosting. The setup will involve:
 ```shell
-# 1. Clone the Repository (Link will be active upon release)
-# git clone https://github.com/AxWise-GmbH/Flow.git
-# cd Flow
+# 1. Clone the Repository (This repository!)
+git clone https://github.com/AxWise-GmbH/Flow.git
+cd Flow
 
 # 2. Configure Environment (.env file: API keys, DB settings, LLM choice)
 cp .env.example .env
-# ... edit .env ...
+# ... edit .env with your API keys (Gemini/OpenAI) and database settings ...
 
-# 3. Run using Docker (Example)
-docker-compose up -d
+# 3. Run using Docker (Recommended for ease of setup - Dockerfile coming soon)
+# docker-compose up -d 
+
+# OR Run Manually (See detailed setup in README.md and docs/ENVIRONMENT_CONFIG.md)
+# (Activate Python venv, install requirements, start backend, start frontend)
+python start.py # Example unified start script
 
 # 4. Interact via API or integrate with your tools
 ```
-*(**Note:** Detailed self-hosting instructions will accompany the open-source release.)*
+*(**Note:** Detailed self-hosting instructions, including Docker support, will be continuously improved and will accompany the full open-source core release.)*
 
 **3. Stay Updated & Get Involved:**
 *   **🌟 Star this Repository**: Follow our development progress!
 *   **🔔 Join the Waitlist**: Be the first to know about the SaaS launch, open-source release, and major updates! 👉 **[https://axwise.de/join-waitlist?source=github](https://axwise.de/join-waitlist?source=github)**
 *   **🐞 Report Issues:** Found a bug or have a suggestion for the API or core engine? Open an [Issue](https://github.com/AxWise-GmbH/Flow/issues).
-*   **💬 Discuss:** Join the conversation in our [Discussions](https://github.com/AxWise-GmbH/Flow/discussions) tab (once enabled).
+*   **💬 Discuss:** Join the conversation in our [Discussions](https://github.com/AxWise-GmbH/Flow/discussions) tab.
 
 ## ⚙️ Usage Example (Conceptual API Interaction)
+
+This example demonstrates a conceptual interaction with the AxWise Flow API. Refer to the **[API Documentation](docs/API_DOCS.md)** for actual endpoint details.
 
 ```python
 import requests
@@ -157,7 +162,7 @@ import json
 
 # Replace with your self-hosted or future SaaS endpoint
 API_BASE_URL = "http://localhost:8000" 
-# Replace with your actual token or API key mechanism
+# Replace with your actual token (e.g., from Clerk) or API key mechanism
 AUTH_TOKEN = "YOUR_CLERK_JWT_OR_API_KEY" 
 
 headers = {
@@ -165,7 +170,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
-# 1. Upload Interview Data (Example: Raw Text)
+# 1. Upload Interview Data (Example: Raw Text via a dedicated endpoint)
 # (Alternatively, use the /api/data endpoint for file uploads)
 interview_text = """
 User A: The new dashboard is great, much clearer than before.
@@ -173,48 +178,43 @@ User A: However, I still can't find the export settings easily. It took me 5 min
 User B: I agree, the main view is better, but finding specific options is a pain point.
 """
 
-# 2. Trigger Analysis
+# 2. Trigger Analysis (Conceptual - actual endpoint might differ)
+# This example assumes an endpoint that accepts raw text directly for analysis.
+# The current primary flow involves uploading a file first to get a data_id.
 analysis_payload = {
-    # Provide data_id if previously uploaded, or potentially raw text directly (API design TBD)
-    # "data_id": 123, 
-    "text_data": interview_text, # Example: Sending raw text (Actual API might differ)
-    "analysis_config": {
-        "llm_provider": "gemini", # Or "openai"
-        "tasks": ["themes", "patterns", "sentiment", "personas", "insights", "priority"] 
-    }
+    "text": interview_text, # Sending raw text
+    "llm_provider": "gemini", # Or "openai"
+    # "analysis_config": { # Optional: further configuration
+    #    "tasks": ["themes", "patterns", "sentiment", "personas", "insights", "priority"] 
+    # }
 }
 
-# Assuming an endpoint like /api/analyze/text (Actual endpoint TBD)
-analysis_response = requests.post(f"{API_BASE_URL}/api/analyze/text", headers=headers, json=analysis_payload)
+# Example: Using the direct persona generation endpoint
+# For full analysis, you'd typically upload data first, then trigger analysis on the data_id.
+# See /api/data and /api/analyze in API_DOCS.md
+analysis_response = requests.post(f"{API_BASE_URL}/api/generate-persona", headers=headers, json=analysis_payload)
 
-if analysis_response.status_code == 200: # Or 202 if async
-    analysis_result_id = analysis_response.json().get("result_id")
-    print(f"Analysis started with Result ID: {analysis_result_id}")
-
-    # 3. Poll for Results (Conceptual - actual endpoint TBD)
-    # status_url = f"{API_BASE_URL}/api/results/{analysis_result_id}/status"
-    # results_url = f"{API_BASE_URL}/api/results/{analysis_result_id}"
-    # ... polling logic ...
-
-    # 4. Fetch & Process Results (Conceptual)
-    # results_response = requests.get(results_url, headers=headers)
-    # if results_response.status_code == 200:
-    #     final_results = results_response.json()
-    #     print("Analysis Complete:")
-    #     # Access themes, patterns, personas, insights...
-    #     print(f"- Themes Found: {len(final_results.get('results', {}).get('themes', []))}")
-    #     print(f"- Personas Generated: {len(final_results.get('results', {}).get('personas', []))}")
+if analysis_response.status_code == 200:
+    analysis_data = analysis_response.json()
+    print("Analysis Complete:")
+    # Access themes, patterns, personas, insights...
+    if analysis_data.get("personas"):
+        print(f"- Personas Generated: {len(analysis_data.get('personas', []))}")
+        # print(json.dumps(analysis_data.get('personas'), indent=2)) # Print first persona
+    else:
+        print("No personas generated in this example, full results might be structured differently.")
+        # print(json.dumps(analysis_data, indent=2)) # Print full result for inspection
 else:
     print(f"Error starting analysis: {analysis_response.status_code} - {analysis_response.text}")
 
 ```
-*Note: This is a conceptual example. The final API structure and endpoints will be detailed in the official documentation.*
+*Note: This is a conceptual example. The final API structure and endpoints are detailed in the **[API Documentation](docs/API_DOCS.md)**.*
 
 ## 🌐 Open Source Core & SaaS Model
 
 AxWise Flow operates on an **open-core model**:
 
-*   **Open Source Core (Apache 2.0):** The fundamental analysis engine, workflow logic, LLM interactions, and API are functional and will be fully open-sourced. This allows for:
+*   **Open Source Core (Apache License 2.0):** The fundamental analysis engine, workflow logic, LLM interactions, and API are functional and will be fully open-sourced. This allows for:
     *   **Self-Hosting:** Run the core on your own infrastructure for maximum data control and privacy.
     *   **Transparency:** Understand exactly how your data is processed. No black boxes.
     *   **Customization:** Adapt the core to your specific needs, integrate deeply with internal tools, and use any LLM you prefer.
@@ -231,6 +231,7 @@ This hybrid approach provides flexibility for enterprises needing control and tr
 
 With the core API and analysis features implemented, our focus is on:
 
+*   ✅ **Core Engine & API Functionality:** Implemented and operational.
 *   ⏳ **Full Open-Source Core Release:** Packaging, documenting, and releasing the core components for easy self-hosting and community contribution.
 *   🎨 **SaaS UI Development:** Building the intuitive web interface for the E2E workflow.
 *   🚀 **SaaS Platform Launch:** Making AxWise Flow accessible as a managed service via [axwise.de](https://axwise.de/).
@@ -243,7 +244,7 @@ With the core API and analysis features implemented, our focus is on:
 
 We welcome contributions! Whether it's improving the core engine, adding LLM support, enhancing documentation, reporting bugs, or suggesting features, your input is valuable.
 
-Once the core repository structure is finalized for open-source release, we will provide a detailed `CONTRIBUTING.md` guide. We plan to use a **Contributor License Agreement (CLA)**.
+Please see our **[CONTRIBUTING.md](CONTRIBUTING.md)** guide (once available) for details on how to contribute, our development process, and coding standards. We plan to use a **Contributor License Agreement (CLA)** for contributions.
 
 ## 📝 License
 
