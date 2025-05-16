@@ -45,7 +45,7 @@ The **core engine, LLM processing logic, prompts, and API** are functional and w
 
 <div align="center">
   <h3>The AxWise Flow Process</h3>
-  <img src="https://axwise.de/assets/updatedflow-CwaTTRJ3.svg" alt="AxWise Flow Process Diagram - Idea to Actionable Plan" width="90%">
+  <img src="https://axwise.de/assets/updatedflow-DoYAyKWY.svg" alt="AxWise Flow Process Diagram - Idea to Actionable Plan" width="90%">
   <p><em>A streamlined flow from input definition to actionable outputs.</em></p>
 </div>
 
